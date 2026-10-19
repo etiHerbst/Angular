@@ -1,0 +1,29 @@
+
+<p>unstall works!</p>
+
+
+
+
+  direction: rtl;
+  text-align: right;
+
+
+<H2>כניסה להתקנת תוכנות לימודיות על המחשב</H2>
+
+<!-- שדה קלט -->
+<div>
+  <label for="ID">ת.ז:</label>
+  <input type="number" id="ID" placeholder="הקלד מספר זהות">
+</div>
+
+<!-- צ'קבוקס עם משתנה הפניה -->
+<div>
+  <label>
+    <input type="checkbox" #termsCheckbox> האם קראת ואישרת את התקנון?
+  </label>
+</div>
+
+<!-- לחצן עם תנאי מנוטרל -->
+<button type="button" [disabled]="!termsCheckbox.checked">היכנס</button>
+
+
