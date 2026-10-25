@@ -1,0 +1,19 @@
+<!-- <p>mark works!</p>
+<ul>
+  <li *ngFor="let m of marksList">
+ {{ m.subject }}  {{ m.mark }}  </li>
+</ul> -->
+<p>mark works!</p>
+<ul>
+  <li *ngFor="let m of marksList">
+    {{ m.subject }} - ציון: {{ m.mark }} : 
+    
+    <!-- בדיקת תנאי להצגת הטקסט והעיצוב -->
+    <span [style.color]="m.mark < 60 ? 'red' : 'inherit'" 
+          [style.font-weight]="m.mark < 60 ? 'bold' : 'normal'">
+      {{ m.mark >= 60 ? 'עבר' : 'לא עבר' }}
+    </span>
+    
+  </li>
+</ul>
+<p>ממוצע הציונים הכולל הוא: {{ calculateAverage() }}</p>
